@@ -51,7 +51,7 @@ async def on_message(message):
         msg = msg[msg.find('I\'m')+4::]
         dad_joke = 'Hello {}, I\'m dad.'.format(msg)
         await message.channel.send(dad_joke)
-        await client.process_commands(msg)
+        # await client.process_commands(msg)
 # add i'm, I am, im, IM
 '''
 def dad_joke(message, client):
