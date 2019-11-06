@@ -8,7 +8,7 @@ import os
 # @bot.command()
 # async def 
 #load_dotenv()
-token = 'NjI1ODYyMjU0MDc1ODM4NDc0.XcIxZQ.OGO4u6HjmlEimqXLvHopKk78_kg'
+token = 'NjI1ODYyMjU0MDc1ODM4NDc0.XcMFhQ.BR7Jhlxc161O_nGbLsuXe67QNFA'
 # client = Bot()
 client = discord.Client()
 
@@ -48,10 +48,11 @@ async def on_message(message):
     
     if 'I\'m' in message.content:
         msg = message.content
-        msg = msg.replace('I\'m', '')
+        msg = msg[msg.find('I\'m')+4::]
         dad_joke = 'Hello {}, I\'m dad.'.format(msg)
         await message.channel.send(dad_joke)
         await client.process_commands(msg)
+# add i'm, I am, im, IM
 '''
 def dad_joke(message, client):
     return 'Hello {}, I\'m dad.'.format(message)
