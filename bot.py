@@ -2,7 +2,7 @@ import discord
 # from dotenv import load_dotenv
 
 import os
-
+import random
 #from discord.ext.commands import Bot
 
 # @bot.command()
@@ -51,6 +51,16 @@ async def on_message(message):
         msg = msg[msg.find('I\'m')+4::]
         dad_joke = 'Hello {}, I\'m dad.'.format(msg)
         await message.channel.send(dad_joke)
+    if 'dad' in message.content.lower() or 'father' in message.content.lower():
+        dad_sayings = [
+            'Ok buddy, I\'m getting cigarettes, I\'ll be right back.',
+            'You\'re adopted.', 'Not now, I am working.'
+        ]
+        answer = random.choice(dad_sayings)
+        await message.channel.send(answer)
+    if 'hard' in message.content.lower() or 'sucks' in message.content.lower() or 'difficult' in message.content.lower() or 'I hate' in message.content.lower():
+        reply = 'This will build character.'
+        await message.channel.send(reply)
         # await client.process_commands(msg)
 # add i'm, I am, im, IM
 '''
