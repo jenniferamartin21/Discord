@@ -46,7 +46,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if 'I\'m' in message.content:
+    if 'i\'m' in message.content.lower() or 'i am' in message.content.lower() or 'im' in message.content.lower():
         msg = message.content
         msg = msg[msg.find('I\'m')+4::]
         dad_joke = 'Hello {}, I\'m dad.'.format(msg)
@@ -63,14 +63,6 @@ async def on_message(message):
         await message.channel.send(reply)
         # await client.process_commands(msg)
 # add i'm, I am, im, IM
-'''
-def dad_joke(message, client):
-    return 'Hello {}, I\'m dad.'.format(message)
-dad_joke_command = {
-    'trigger': 'I\'m',
-    'function': dad_joke,
-}
-'''
 
 
 
