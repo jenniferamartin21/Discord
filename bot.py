@@ -1,4 +1,5 @@
 import discord
+from boto.s3.connection import S3Connection
 # from dotenv import load_dotenv
 
 import os
@@ -8,8 +9,9 @@ import random
 # @bot.command()
 # async def 
 #load_dotenv()
-token = 'NjI1ODYyMjU0MDc1ODM4NDc0.XcMFhQ.BR7Jhlxc161O_nGbLsuXe67QNFA'
-# client = Bot()
+s3 = S3Connection(os.environ['ENV_TOKEN'])
+token = s3
+#token = 'NjI1ODYyMjU0MDc1ODM4NDc0.XcMFhQ.BR7Jhlxc161O_nGbLsuXe67QNFA' # client = Bot()
 client = discord.Client()
 
 '''
