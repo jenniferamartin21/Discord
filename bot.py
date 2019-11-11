@@ -55,7 +55,7 @@ async def on_message(message):
         dad_sayings = [
             'Ok buddy, I\'m getting cigarettes, I\'ll be right back.',
             'You\'re adopted.', 'Not now, I am working.',
-            'Do your homework'
+            'Do your homework', 'When I was your age'
         ]
         answer = random.choice(dad_sayings)
         await message.channel.send(answer)
