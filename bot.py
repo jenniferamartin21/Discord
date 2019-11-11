@@ -54,13 +54,15 @@ async def on_message(message):
     if 'dad' in message.content.lower() or 'father' in message.content.lower():
         dad_sayings = [
             'Ok buddy, I\'m getting cigarettes, I\'ll be right back.',
-            'You\'re adopted.', 'Not now, I am working.'
+            'You\'re adopted.', 'Not now, I am working.',
+            'Do your homework'
         ]
         answer = random.choice(dad_sayings)
         await message.channel.send(answer)
     if 'hard' in message.content.lower() or 'sucks' in message.content.lower() or 'difficult' in message.content.lower() or 'I hate' in message.content.lower():
-        reply = 'This will build character.'
-        await message.channel.send(reply)
+        replies = ['This will build character.', 'That\'s life']
+        his_reply = random.choice(replies)
+        await message.channel.send(his_reply)
         # await client.process_commands(msg)
 # add i'm, I am, im, IM
 
