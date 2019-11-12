@@ -8,7 +8,7 @@ import random
 # @bot.command()
 # async def 
 #load_dotenv()
-token = 'NjI1ODYyMjU0MDc1ODM4NDc0.XcMFhQ.BR7Jhlxc161O_nGbLsuXe67QNFA'
+token = ENV_TOKEN
 # client = Bot()
 client = discord.Client()
 
